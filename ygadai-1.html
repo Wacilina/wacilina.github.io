@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Угадай число</title>
+<style>
+body
+{
+font-size: 20px;
+color: brown;
+}
+b
+{
+color: crimson;
+}
+strong
+{
+color: coral;
+}
+</style>
+</head>
+<body>
+<script>
+var min = 1;
+var max = 100;
+var N = Math.floor(Math.random() * (max - min + 1)) + min; 
+document.write("Компьютер загадал число от " + min + " до " + max + ". Угадайте его за 7 попыток<br>");
+var username = prompt('Введите как к Вам обращаться: '); 
+var username_2 = prompt('Введите как к Вам обращаться: ');
+var N_2 = Math.floor(Math.random() * (max - min + 1)) + min;
+var p = 0; 
+var p_2 = 0; 
+var C;
+var C_2;
+do 
+{
+	p = p + 1; 
+	C = + prompt (username + "\n" + p + " попытка." +  " Ваш вариант: "); 
+	document.write (username + "\n" + p + "." + C + "");
+	if ( C > N)
+		document.write ("<b> Перелет</b><br>");
+	if ( C < N)
+		document.write ("<strong> Недолет</strong><br>");
+	if (C != N)
+			p_2 = p_2 + 1; 
+			C_2 = + prompt (username_2 + "\n" + p_2 + " попытка." + " Ваш вариант: "); 
+			document.write (username_2 + "\n" + p_2 + "." + C_2 +  "");
+			if ( C_2 > N_2)
+				document.write ("<b> Перелет</b><br>");
+			if ( C_2 < N_2)
+				document.write ("<strong> Недолет</strong><br>");
+}
+while (C_2 != N_2 && p_2 < 7);
+while (C != N && p < 7 );
+	if (C == N)
+		document.write ("\n" +"Поздравляем!" + username + "Вы угадали!");
+	if (C_2 == N_2)
+		document.write ("\n" +"Поздравляем! " + username_2 + " Вы угадали!");
+	else 
+		document.write
+	("Вы проиграли! Попробуйте еще раз");
+</script>
+</body>
+</html>

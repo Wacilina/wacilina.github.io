@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="stayle.css">
+	<script type="text/javascript">
+		
+		var result = 0;
+		function AskQuestions(text, )
+
+		function AskQuestions()
+		{
+			var userAnswer = document.getElementById("userAnswer1").value;
+			var result = 0;
+			if(userAnswer == "Зубы")
+				result++;
+
+			userAnswer = document.getElementById("userAnswer2").value;
+			if(userAnswer == "Сонце и ромашка")
+				result++;
+
+			if(result == 2)
+				alert("Вы угодали все загадки");
+			else if(result == 1)
+				alert("Вы угодали одну загадку");
+			else
+				alert("Вы ничего не угодали");
+		}
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="saytik-3.html">Главная</a><span>/</span>
+		<a href="pazzle.html">Загадки</a><span>/</span>
+		<a href="#">Угадайка</a><span>/</span>
+		<a href="ygadai-1.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">
+		<h3>Игра в загадки.</h3>
+		<div id="Box">
+		<h5>Отгадай загадки!</h5>
+		<p>Загадка первая: 
+		Тридцать белых коней
+		На двух красных холмах - 
+		Разбегутся, сшибутся 
+		И снова затихнут впотьмах.</p>
+		<input type="Text" name="Ответ" id = "userAnswer1">
+
+		<p>Открылся глаз на зелёном лице,
+		Подмигнул глазу на синем лице: 
+		"Мы с тобою похожи, как братья, 
+		Только ты высоко, не добраться"</p>
+		<input type = "Text" name = "Ответ" id = "userAnswer2">
+	<br></br>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
